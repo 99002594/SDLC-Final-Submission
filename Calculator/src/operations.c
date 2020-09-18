@@ -23,7 +23,7 @@ int divide(int operand1, int operand2)
     else
         return operand1 / operand2;
 }
-/*
+
 float power(float operand1, float operand2)
 {
     if(operand1==0)
@@ -76,4 +76,4 @@ float cotangent(float operand1)
 {
     return 1/tan(operand1);
 }
-*/
+
