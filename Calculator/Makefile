@@ -9,10 +9,10 @@ SRC = main.c\
 src/operations.c\
 
 # All test source files
-#TEST_SRC = src/sum.c\
-#test/test_sum.c
+TEST_SRC = src/operations.c\
+test/test_sum.c
 
-#TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
 INC	= -Iinc
@@ -40,13 +40,13 @@ run:$(PROJECT_NAME)
 	#make -C ./documentation
 
 # Build and run the unit tests
-#test:$(BUILD)
-	#gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
-	#./$(TEST_OUTPUT)
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit -lm
+	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`
-#clean:
-	#rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+clean:
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
 
 # Create new build folder if not present
 $(BUILD):
