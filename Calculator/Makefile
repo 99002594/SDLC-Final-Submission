@@ -10,7 +10,7 @@ src/operations.c\
 
 # All test source files
 TEST_SRC = src/operations.c\
-test/test_sum.c
+test/test_operations.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
