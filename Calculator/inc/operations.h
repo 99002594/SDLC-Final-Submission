@@ -45,4 +45,55 @@ int multiply(int operand1, int operand2);
 */
 int divide(int operand1, int operand2);
 
-#endif  /* #define __CALCULATOR_OPERATIONS_H__ */
+/**
+* powers the operand1 by operand2 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return float value of the operand1**operand2
+* @note returns 0 for 0 power 0 error
+*/
+float power(int operand1, int operand2);
+
+/**
+* logarithm to base 10 of operand1 and returns the result 
+* @param[in] operand1  
+* @return float value of the logarithm of operand1
+*/
+float logarithm(float operand1);
+
+/**
+* logarithm of operand1 and returns the result 
+* @param[in] operand1  
+* @return float value of the natural logarithm of operand1
+*/
+float natural_logarithm(float operand1);
+
+/**
+* sine of operand1 and returns the result 
+* @param[in] operand1  
+* @return float value of the sine of operand1
+*/
+float sine(float operand1);
+
+/**
+* cosine of operand1 and returns the result 
+* @param[in] operand1  
+* @return float value of the sine of operand1
+*/
+float cosine(float operand1);
+
+/**
+* tangent of operand1 and returns the result 
+* @param[in] operand1  
+* @return float value of the sine of operand1
+*/
+float tangent(float operand1);
+
+/**
+* cotangent of operand1 and returns the result 
+* @param[in] operand1  
+* @return float value of the sine of operand1
+*/
+float cotangent(float operand1);
+
+#endif  /* #define __OPERATIONS_H__ */
