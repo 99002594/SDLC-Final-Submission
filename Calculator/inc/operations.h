@@ -65,6 +65,7 @@ float logarithm(float operand1);
 * logarithm of operand1 and returns the result 
 * @param[in] operand1  
 * @return float value of the natural logarithm of operand1
+* @note returns 0 for logarithm of 0 error
 */
 float natural_logarithm(float operand1);
 
@@ -72,6 +73,7 @@ float natural_logarithm(float operand1);
 * sine of operand1 and returns the result 
 * @param[in] operand1  
 * @return float value of the sine of operand1
+* @note returns 0 for logarithm of 0 error
 */
 float sine(float operand1);
 
