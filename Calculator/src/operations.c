@@ -1,4 +1,4 @@
-#include <calculator_operations.h>
+#include <operations.h>
 
 int add(int operand1, int operand2)
 {
