@@ -52,7 +52,7 @@ int divide(int operand1, int operand2);
 * @return float value of the operand1**operand2
 * @note returns 0 for 0 power 0 error
 */
-float power(int operand1, int operand2);
+float power(float operand1, float operand2);
 
 /**
 * logarithm to base 10 of operand1 and returns the result 
