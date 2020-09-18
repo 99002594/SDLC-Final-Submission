@@ -63,38 +63,41 @@ void calculator_menu(void)
     switch(calculator_operation)
     {
         case ADD:
-            
+            result_float=add(calculator_operand1, calculator_operand2);
             printf("\n\t%f + %f = %f\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
-            add(calculator_operand1, calculator_operand2));
+            result_float);
             
             __fpurge(stdin);
             getchar();
             break;
         case SUBTRACT:
+            result_float=subtract(calculator_operand1, calculator_operand2);
             printf("\n\t%f - %f = %f\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
-            subtract(calculator_operand1, calculator_operand2));
+            result_float);
             
             __fpurge(stdin);
             getchar();
             break;
         case MULTIPLY:
+            result_float=multiply(calculator_operand1, calculator_operand2);
             printf("\n\t%f * %f = %f\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
-            multiply(calculator_operand1, calculator_operand2));
+            result_float);
             
             __fpurge(stdin);
             getchar();
             break;
         case DIVIDE:
+            result_float=divide(calculator_operand1, calculator_operand2);
             printf("\n\t%f / %f = %f\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
-            divide(calculator_operand1, calculator_operand2));
+           result_float);
             
             __fpurge(stdin);
             getchar();
