@@ -132,6 +132,6 @@ double floor_value(double operand1)
 }
 
 double absolute_value(double operand1)
-{
+{ 
     return abs(operand1);
 }
