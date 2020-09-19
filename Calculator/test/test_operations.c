@@ -85,8 +85,8 @@ void test_divide(void) {
 }
 void test_power(void) {
   CU_ASSERT(1 == power(1, 0));
-  CU_ASSERT(0==power(0,0);
-  CU_ASSERT(256==power(4,4);
+  CU_ASSERT(0==power(0,0));
+  CU_ASSERT(256==power(4,4));
   /* Dummy fail*/
   CU_ASSERT(3 == power(2, 2));
 }
