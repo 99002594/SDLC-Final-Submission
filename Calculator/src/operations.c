@@ -95,7 +95,7 @@ double cube_root(double operand1)
 
 double Higher_root(double operand1, double operand2)
 {
-    if(operand1==0)
+    if(operand1<=0)
         return 0;
     else
         return pow(operand1,1/operand2);
