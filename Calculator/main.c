@@ -12,7 +12,7 @@ float calculator_operand1 = 0;
 float calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, POWER, LOGARITHM, NATURAL_LOGARITHM, SINE, COSINE, TANGENT, COTANGENT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Power\n6. Logarithm\n7. Natural Logarithm\n8. Sine\n9. Cosine\n10. Tangent\n11. Cotangent\n12, Exit");
     printf("\n\tEnter your choice\n");
     float result_float=0.0;
    
@@ -102,7 +102,71 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case 5:
+        case POWER:
+            result_float=power(calculator_operand1, calculator_operand2);
+            printf("\n\t%f ** %f = %f\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case LOGARITHM:
+            result_float=logarithm(calculator_operand1);
+            printf("\n\tlog10 of %f = %f\nEnter to continue", 
+            calculator_operand1, 
+            result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case NATURAL_LOGARITHM:
+            result_float=natural_logarithm(calculator_operand1);
+            printf("\n\tlog of %f = %f\nEnter to continue", 
+            calculator_operand1, 
+            result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case SINE:
+            result_float=sine(calculator_operand1);
+            printf("\n\sine of %f = %f\nEnter to continue", 
+            calculator_operand1, 
+            result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case COSINE:
+            result_float=cosine(calculator_operand1);
+            printf("\n\cosine of %f = %f\nEnter to continue", 
+            calculator_operand1, 
+            result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case TANGENT:
+            result_float=tangent(calculator_operand1);
+            printf("\n\tan of %f = %f\nEnter to continue", 
+            calculator_operand1, 
+            result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case COTANGENT:
+            result_float=cotangent(calculator_operand1);
+            printf("\n\cot of %f = %f\nEnter to continue", 
+            calculator_operand1, 
+           result_float);
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case 12:
             exit(0);
             break;
         default:
