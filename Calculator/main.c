@@ -249,7 +249,7 @@ void calculator_menu(void)
             getchar();
             break;
           case ABS_VALUE:
-            result_float=abs_value(calculator_operand1);
+            result_float=absolute_value(calculator_operand1);
             printf("\n\t abs value of %f = %f\nEnter to continue", 
             calculator_operand1, 
             result_float);
