@@ -44,7 +44,7 @@ double multiply(double operand1, double operand2);
 * @return integer value of the operand1 / operand2
 * @note returns 0 for divide by 0 error
 */
-double divide(double operand1, double operand2)
+double divide(double operand1, double operand2);
 
 /**
 * powers the operand1 by operand2 and returns the result 
