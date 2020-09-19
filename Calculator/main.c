@@ -8,8 +8,8 @@
 unsigned int calculator_operation = 0;
 
 /* Operands on which calculation is performed */
-float calculator_operand1 = 0;
-float calculator_operand2 = 0;
+double calculator_operand1 = 0;
+double calculator_operand2 = 0;
 
 /* Valid operations */
 enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, POWER, HIGHER_ROOT, LOGARITHM, NATURAL_LOGARITHM, SINE, COSINE, TANGENT, COTANGENT, SQUARE_ROOT, CUBE_ROOT, INVERSE, DEG_TO_RAD, RAD_TO_DEG, CEIL_VALUE, FLOOR_VALUE, ABS_VALUE,  EXIT };
@@ -35,7 +35,7 @@ void calculator_menu(void)
     printf("\nAvailable Operations\n");
     printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Power\n6. Higher roots\n7. Logarithm\n8. Natural Logarithm\n9. Sine\n10. Cosine\n11. Tangent\n12. Cotangent\n13. Square root\14. Cube root\n15. Inverse\n16. Deg_to_Rad\n17. Rad_to_Deg\n18. Ceil_value\n19. Floor_value\n20. Abs_value\n21. Exit");
     printf("\n\tEnter your choice\n");
-    float result_float=0.0;
+    double result_float=0.0;
    
      __fpurge(stdin);
     scanf("%d", &calculator_operation);
@@ -48,17 +48,17 @@ void calculator_menu(void)
 
     if(INVALID != valid_operation(calculator_operation))
     {
-        if(calculator_operation<=6)
+        if(calculator_operation>6)
         {
             printf("\n\tEnter your Number\n");
             __fpurge(stdin);
-            scanf("%f ", &calculator_operand1);
+            scanf("%lf ", &calculator_operand1);
               }
         else
         {
             printf("\n\tEnter your Numbers with space between them\n");
             __fpurge(stdin);
-            scanf("%f %f", &calculator_operand1, &calculator_operand2);
+            scanf("%lf %lf", &calculator_operand1, &calculator_operand2);
         }
     }
     else
@@ -73,7 +73,7 @@ void calculator_menu(void)
     {
         case ADD:
             result_float=add(calculator_operand1, calculator_operand2);
-            printf("\n\t%f + %f = %f\nEnter to continue", 
+            printf("\n\t%lf + %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
             result_float);
@@ -83,7 +83,7 @@ void calculator_menu(void)
             break;
         case SUBTRACT:
             result_float=subtract(calculator_operand1, calculator_operand2);
-            printf("\n\t%f - %f = %f\nEnter to continue", 
+            printf("\n\t%lf - %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
             result_float);
@@ -93,7 +93,7 @@ void calculator_menu(void)
             break;
         case MULTIPLY:
             result_float=multiply(calculator_operand1, calculator_operand2);
-            printf("\n\t%f * %f = %f\nEnter to continue", 
+            printf("\n\t%lf * %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
             result_float);
@@ -103,7 +103,7 @@ void calculator_menu(void)
             break;
         case DIVIDE:
             result_float=divide(calculator_operand1, calculator_operand2);
-            printf("\n\t%f / %f = %f\nEnter to continue", 
+            printf("\n\t%lf / %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
            result_float);
@@ -113,7 +113,7 @@ void calculator_menu(void)
             break;
         case POWER:
             result_float=power(calculator_operand1, calculator_operand2);
-            printf("\n\t%f ** %f = %f\nEnter to continue", 
+            printf("\n\t%lf ** %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
             result_float);
@@ -123,7 +123,7 @@ void calculator_menu(void)
             break;
         case HIGHER_ROOT:
             result_float=Higher_root(calculator_operand1, calculator_operand2);
-            printf("\n\t%f root of %f = %f\nEnter to continue", 
+            printf("\n\t%lf root of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             calculator_operand2,
             result_float);
@@ -133,7 +133,7 @@ void calculator_menu(void)
             break;            
         case LOGARITHM:
             result_float=logarithm(calculator_operand1);
-            printf("\n\tlog10 of %f = %f\nEnter to continue", 
+            printf("\n\tlog10 of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -142,7 +142,7 @@ void calculator_menu(void)
             break;
         case NATURAL_LOGARITHM:
             result_float=natural_logarithm(calculator_operand1);
-            printf("\n\tlog of %f = %f\nEnter to continue", 
+            printf("\n\tlog of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -151,7 +151,7 @@ void calculator_menu(void)
             break;
         case SINE:
             result_float=sine(calculator_operand1);
-            printf("\n\tsine of %f = %f\nEnter to continue", 
+            printf("\n\tsine of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -160,7 +160,7 @@ void calculator_menu(void)
             break;
         case COSINE:
             result_float=cosine(calculator_operand1);
-            printf("\n\tcosine of %f = %f\nEnter to continue", 
+            printf("\n\tcosine of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -169,7 +169,7 @@ void calculator_menu(void)
             break;
         case TANGENT:
             result_float=tangent(calculator_operand1);
-            printf("\n\t tan of %f = %f\nEnter to continue", 
+            printf("\n\t tan of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -178,7 +178,7 @@ void calculator_menu(void)
             break;
         case COTANGENT:
             result_float=cotangent(calculator_operand1);
-            printf("\n\t cot of %f = %f\nEnter to continue", 
+            printf("\n\t cot of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
            result_float);
             
@@ -187,7 +187,7 @@ void calculator_menu(void)
             break;
         case SQUARE_ROOT:
             result_float=square_root(calculator_operand1);
-            printf("\n\t sqrt of %f = %f\nEnter to continue", 
+            printf("\n\t sqrt of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -196,7 +196,7 @@ void calculator_menu(void)
             break;
         case CUBE_ROOT:
             result_float=cube_root(calculator_operand1);
-            printf("\n\t cube root of %f = %f\nEnter to continue", 
+            printf("\n\t cube root of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -205,7 +205,7 @@ void calculator_menu(void)
             break;
          case INVERSE:
             result_float=inverse(calculator_operand1);
-            printf("\n\t inverse of %f = %f\nEnter to continue", 
+            printf("\n\t inverse of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -214,7 +214,7 @@ void calculator_menu(void)
             break;
          case DEG_TO_RAD:
             result_float=deg_to_rad(calculator_operand1);
-            printf("\n\t radian of %f = %f\nEnter to continue", 
+            printf("\n\t radian of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -223,7 +223,7 @@ void calculator_menu(void)
             break;
           case RAD_TO_DEG:
             result_float=rad_to_deg(calculator_operand1);
-            printf("\n\t degree of %f = %f\nEnter to continue", 
+            printf("\n\t degree of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -232,7 +232,7 @@ void calculator_menu(void)
             break;
           case CEIL_VALUE:
             result_float=ceil_value(calculator_operand1);
-            printf("\n\t ceil value of %f = %f\nEnter to continue", 
+            printf("\n\t ceil value of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -241,7 +241,7 @@ void calculator_menu(void)
             break;
           case FLOOR_VALUE:
             result_float=floor_value(calculator_operand1);
-            printf("\n\t floor value of %f = %f\nEnter to continue", 
+            printf("\n\t floor value of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -250,7 +250,7 @@ void calculator_menu(void)
             break;
           case ABS_VALUE:
             result_float=absolute_value(calculator_operand1);
-            printf("\n\t abs value of %f = %f\nEnter to continue", 
+            printf("\n\t abs value of %lf = %lf\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
