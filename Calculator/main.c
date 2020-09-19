@@ -139,7 +139,7 @@ void calculator_menu(void)
             break;
         case SINE:
             result_float=sine(calculator_operand1);
-            printf("\n\sine of %f = %f\nEnter to continue", 
+            printf("\n\tsine of %f = %f\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -148,7 +148,7 @@ void calculator_menu(void)
             break;
         case COSINE:
             result_float=cosine(calculator_operand1);
-            printf("\n\cosine of %f = %f\nEnter to continue", 
+            printf("\n\tcosine of %f = %f\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -157,7 +157,7 @@ void calculator_menu(void)
             break;
         case TANGENT:
             result_float=tangent(calculator_operand1);
-            printf("\n\tan of %f = %f\nEnter to continue", 
+            printf("\n\t tan of %f = %f\nEnter to continue", 
             calculator_operand1, 
             result_float);
             
@@ -166,7 +166,7 @@ void calculator_menu(void)
             break;
         case COTANGENT:
             result_float=cotangent(calculator_operand1);
-            printf("\n\cot of %f = %f\nEnter to continue", 
+            printf("\n\t cot of %f = %f\nEnter to continue", 
             calculator_operand1, 
            result_float);
             
