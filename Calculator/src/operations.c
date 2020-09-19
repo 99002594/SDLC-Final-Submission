@@ -1,22 +1,22 @@
 #include <operations.h>
 #include <math.h>
 
-float add(float operand1, float operand2)
+double add(double operand1, double operand2)
 {
     return operand1 + operand2;
 }
 
-float subtract(float operand1, float operand2)
+double subtract(double operand1, double operand2)
 {
     return operand1 - operand2;
 }
 
-float multiply(float operand1, float operand2)
+double multiply(double operand1, double operand2)
 {
     return operand1 * operand2;
 }
 
-float divide(float operand1, float operand2)
+double divide(double operand1, double operand2)
 {
     if(0 == operand2)
         return 0;
@@ -24,7 +24,7 @@ float divide(float operand1, float operand2)
         return operand1 / operand2;
 }
 
-float power(float operand1, float operand2)
+double power(double operand1, double operand2)
 {
     if(operand1==0)
         return 0;
@@ -34,7 +34,7 @@ float power(float operand1, float operand2)
 
 
 
-float logarithm(float operand1)
+double logarithm(double operand1)
 {
     if(operand1<=0)
         return 0;
@@ -44,7 +44,7 @@ float logarithm(float operand1)
 }
 
 
-float natural_logarithm(float operand1)
+double natural_logarithm(double operand1)
 {
     if(operand1<=0)
         return 0;
@@ -54,30 +54,30 @@ float natural_logarithm(float operand1)
 }
 
 
-float sine(float operand1)
+double sine(double operand1)
 {
     return sin(operand1);
 }
 
 
-float cosine(float operand1)
+double cosine(double operand1)
 {
     return cos(operand1);
 }
 
 
-float tangent(float operand1)
+double tangent(double operand1)
 {
     return tan(operand1);
 }
 
 
-float cotangent(float operand1)
+double cotangent(double operand1)
 {
     return 1/tan(operand1);
 }
 
-float square_root(float operand1)
+double square_root(double operand1)
 {
     if(operand1<=0)
         return 0;
@@ -85,7 +85,7 @@ float square_root(float operand1)
         return sqrt(operand1);
 }
 
-float cube_root(float operand1)
+double cube_root(double operand1)
 {
     if(operand1<=0)
         return 0;
@@ -93,7 +93,7 @@ float cube_root(float operand1)
         return pow(operand1,3);
 }
 
-float Higher_root(float operand1, float operand2)
+double Higher_root(double operand1, double operand2)
 {
     if(operand1==0)
         return 0;
@@ -101,7 +101,7 @@ float Higher_root(float operand1, float operand2)
         return pow(operand1,1/operand2);
 }
 
-float inverse(float operand1)
+double inverse(double operand1)
 {
     if(operand1<=0)
         return 0;
@@ -109,29 +109,29 @@ float inverse(float operand1)
         return 1/operand1;
 }
  
-float deg_to_rad(float operand1)
+double deg_to_rad(double operand1)
 {
     float radians=operand1*(22/7)/180;
     return radians;
 }
 
-float rad_to_deg(float operand1)
+double rad_to_deg(double operand1)
 {
     float degree=operand1*(180/(22/7));
     return degree;
 }
 
-float ceil_value(float operand1)
+double ceil_value(double operand1)
 {
     return ceil(operand1);
 }
 
-float floor_value(float operand1)
+double floor_value(double operand1)
 {
     return floor(operand1);
 }
 
-float absolute_value(float operand1)
+double absolute_value(double operand1)
 {
     return abs(operand1);
 }
