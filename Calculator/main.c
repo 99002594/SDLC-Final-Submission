@@ -51,12 +51,12 @@ void calculator_menu(void)
         if{calculator_operation<=5){
             printf("\n\tEnter your Number\n");
             __fpurge(stdin);
-            scanf("%d ", &calculator_operand1);
+            scanf("%f ", &calculator_operand1);
               }
         else{
             printf("\n\tEnter your Numbers with space between them\n");
             __fpurge(stdin);
-            scanf("%d %d", &calculator_operand1, &calculator_operand2);
+            scanf("%f %f", &calculator_operand1, &calculator_operand2);
         }
     }
     else
