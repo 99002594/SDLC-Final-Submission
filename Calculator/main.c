@@ -48,12 +48,14 @@ void calculator_menu(void)
 
     if(INVALID != valid_operation(calculator_operation))
     {
-        if{calculator_operation<=5){
+        if(calculator_operation<=5)
+        {
             printf("\n\tEnter your Number\n");
             __fpurge(stdin);
             scanf("%f ", &calculator_operand1);
               }
-        else{
+        else
+        {
             printf("\n\tEnter your Numbers with space between them\n");
             __fpurge(stdin);
             scanf("%f %f", &calculator_operand1, &calculator_operand2);
