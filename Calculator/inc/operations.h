@@ -19,7 +19,7 @@
 * @return Result of operand1 + operand2
 */
 double add(double operand1, double operand2);
-
+ 
 /**
 *  subtracts the operand1, operand2 and returns the result
 * @param[in] operand1 
